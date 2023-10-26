@@ -4,5 +4,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
-ARG URL=${URL}
+ENV URL=${URL}
 CMD ["npm", "start"]
