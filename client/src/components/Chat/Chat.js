@@ -13,7 +13,7 @@ import Messages from "../Messages/Messages";
 
 let socket;
 
-const ENDPOINT = "http://localhost:5001/";
+const ENDPOINT = "http://144.24.84.244:5001/";
 
 const Chat = () => {
   const location = useLocation();
