@@ -4,8 +4,6 @@ services:
     image: client
     build:
       context: ./client
-      args:
-        URL: ${URL}
       dockerfile: Dockerfile
     env_file: .env
     restart: always
