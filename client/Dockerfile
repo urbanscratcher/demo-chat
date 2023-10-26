@@ -1,7 +1,7 @@
 FROM node:20-alpine
 WORKDIR ./src
 COPY package*.json ./
-RUN npm ci
+RUN pnpm install
 COPY . .
 EXPOSE 3000
 ARG URL
