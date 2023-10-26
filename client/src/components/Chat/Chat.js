@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import io from "socket.io-client";
 import queryString from "query-string";
-import dotenv from 'dotenv';
-dotenv.config({path:"/.env"});
 
 import "./Chat.css";
 
