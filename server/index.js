@@ -78,7 +78,7 @@ function connectSocket(socket){
   
 }
 
-io.on("connection", connectSocket(socket));
+io.on("connection", (socket)=>connectSocket(socket));
 
 app.use(router);
 server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
