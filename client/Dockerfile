@@ -5,4 +5,4 @@ RUN pnpm install
 COPY . .
 EXPOSE 3000
 ARG URL
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]
