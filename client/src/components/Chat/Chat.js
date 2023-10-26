@@ -13,7 +13,7 @@ import Messages from "../Messages/Messages";
 
 let socket;
 
-const ENDPOINT = "localhost:5001";
+const ENDPOINT = "http://144.24.84.244/api";
 
 const Chat = () => {
   const location = useLocation();
@@ -40,7 +40,7 @@ const Chat = () => {
     //   socket.emit("disconnect");
     //   socket.off();
     // };
-  }, [ENDPOINT, location.search]);
+  }, [location.search]);
 
 
   useEffect(() => {
