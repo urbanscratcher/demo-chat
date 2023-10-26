@@ -4,12 +4,14 @@ services:
     image: client
     build:
       context: ./client
-      dockerfile: Dockerfile    
+      dockerfile: Dockerfile
+    restart: always
     ports:
       - 3000:3000
-    restart: always
+    env_file:
+      - .env
     environment:
-      URL: ${URL}
+      - URL=${URL}
   server:
     image: server
     build:

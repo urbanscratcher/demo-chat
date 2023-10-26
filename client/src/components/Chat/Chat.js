@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import io from "socket.io-client";
 import queryString from "query-string";
-
 import "./Chat.css";
 
 import InfoBar from "../InfoBar/InfoBar";
@@ -61,8 +60,6 @@ const Chat = () => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
-
-  console.log(message, messages);
 
   return (
     <div className="outerContainer">
