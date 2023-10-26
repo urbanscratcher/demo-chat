@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import io from "socket.io-client";
 import queryString from "query-string";
+import dotenv from 'dotenv';
+dotenv.config({path:"/.env"});
 
 import "./Chat.css";
 
@@ -13,7 +15,7 @@ import Messages from "../Messages/Messages";
 
 let socket;
 
-const ENDPOINT = "http://144.24.84.244:5001/";
+const ENDPOINT = `http://${process.env.URL}:5001/`;
 
 const Chat = () => {
   const location = useLocation();
