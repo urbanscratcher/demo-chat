@@ -3,8 +3,6 @@ import { useLocation } from "react-router-dom";
 import io from "socket.io-client";
 import queryString from "query-string";
 import "./Chat.css";
-import dotenv from "dotenv";
-dotenv.config();
 
 import InfoBar from "../InfoBar/InfoBar";
 import TextContainer from "../TextContainer/TextContainer";
