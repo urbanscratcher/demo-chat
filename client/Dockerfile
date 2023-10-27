@@ -4,8 +4,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-ARG URL="localhost"
-ENV URL $URL
+ARG REACT_APP_URL
+ENV REACT_APP_URL ${REACT_APP_URL?localhost}
 EXPOSE 3000
-RUN echo ${URL}
-CMD npm start -- -e="$URL"
+CMD npm start

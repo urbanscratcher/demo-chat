@@ -12,7 +12,7 @@ import Messages from "../Messages/Messages";
 
 let socket;
 
-const ENDPOINT = `http://${process.env.URL}:5001/`;
+const ENDPOINT = `http://${process.env.REACT_APP_URL}:5001/`;
 
 const Chat = () => {
   const location = useLocation();
