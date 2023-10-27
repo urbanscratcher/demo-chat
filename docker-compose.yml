@@ -5,7 +5,8 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    env_file: .env
+      args:
+        URL: ${URL}
     restart: always
     ports:
       - 3000:3000
