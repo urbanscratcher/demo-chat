@@ -5,6 +5,6 @@ RUN npm install
 COPY . .
 
 ARG URL="localhost"
-ENV URL=${URL}
+ENV URL $URL
 EXPOSE 3000
-CMD npm start -- -e="${URL}"
+CMD npm start -- -e="$URL"
