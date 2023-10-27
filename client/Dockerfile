@@ -2,8 +2,9 @@ FROM node:20-alpine
 WORKDIR ./src
 COPY package*.json ./
 RUN npm install
-ARG URL
-ENV URL=${URL}
 COPY . .
+
+ARG URL="localhost"
+ENV URL=${URL}
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD npm start -- -e="${URL}"
